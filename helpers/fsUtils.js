@@ -1,5 +1,6 @@
-const fs = require('fs');
-const util = require('util');
+const fs = require("fs");
+const util = require("util");
+console.log('test abc');
 
 // Promise version of fs.readFile
 const readFromFile = util.promisify(fs.readFile);
@@ -20,7 +21,7 @@ const writeToFile = (destination, content) =>
  *  @returns {void} Nothing
  */
 const readAndAppend = (content, file) => {
-  fs.readFile(file, 'utf8', (err, data) => {
+  fs.readFile(file, "utf8", (err, data) => {
     if (err) {
       console.error(err);
     } else {
@@ -31,4 +32,18 @@ const readAndAppend = (content, file) => {
   });
 };
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+const updateNotes = (id) => {
+  console.log('id', id);
+  
+  const notesCollection = readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+  console.log('notesCollection', notesCollection);
+  
+  for (let i = 0; i < notesCollection.length; i++) {
+    if (notesCollection[i].id === id) {
+      notesCollection.splice(i, 1);
+      writeToFile('./db/db.json', notesCollection);
+    } 
+  }
+};
+
+module.exports = { readFromFile, writeToFile, readAndAppend, updateNotes };
