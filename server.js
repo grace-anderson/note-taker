@@ -31,7 +31,7 @@ app.get('/notes', (req, res) =>
 //404 route
 //if it doesn't match anything above, its a 404
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/pages/404.html'))
+  res.sendFile(path.join(__dirname, '/public/404.html'))
 })
 
 app.listen(PORT, () =>
