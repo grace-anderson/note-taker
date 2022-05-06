@@ -28,8 +28,12 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
-//404 route
-//if it doesn't match anything above, its a 404
+//if it doesn't match anything above, get the index file
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+})
+
+//if index file unavailable, show 404.
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/404.html'))
 })
