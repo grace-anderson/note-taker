@@ -5,11 +5,6 @@
         "id": "6dded448-870a-4df9-892e-8abbd1462861"
     },
     {
-        "title": "kfadlj",
-        "text": "adsfjljl",
-        "id": "122ed77a-154a-4a92-b496-e755a43b2d27"
-    },
-    {
         "title": "this is yet another note",
         "text": "lalalala",
         "id": "c45408bc-1683-4597-8758-7588de348dc1"
@@ -23,5 +18,10 @@
         "title": "asdasdf",
         "text": "dasfd dafasdf",
         "id": "92588565-fcf5-4fbf-951e-bb45246477e5"
+    },
+    {
+        "title": "Adding another note today",
+        "text": "node note note note note note node note note note note note node note note note note note node note note note note note node note note note note note node note note note note note\n",
+        "id": "e61c8821-7279-40b6-b703-648f91e3977e"
     }
 ]
