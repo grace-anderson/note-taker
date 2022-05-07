@@ -33,11 +33,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
-//if index file unavailable, show 404.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/404.html'))
-})
-
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
