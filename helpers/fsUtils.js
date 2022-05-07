@@ -1,6 +1,8 @@
 const fs = require("fs");
 const util = require("util");
 
+
+
 // Promise version of fs.readFile
 const readFromFile = util.promisify(fs.readFile);
 /**
@@ -9,7 +11,7 @@ const readFromFile = util.promisify(fs.readFile);
  *  @param {object} content The content you want to write to the file.
  *  @returns {void} Nothing
  */
-const writeToFile = (destination, content) =>
+const writeToFile = (destination, content) => 
   fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
     err ? console.error(err) : console.info(`\nData written to ${destination}`)
   );
@@ -31,7 +33,7 @@ const readAndAppend = (content, file) => {
   });
 };
 
-const updateNotes = (id, file) => {
+const deleteNote = (id, file) => {
   let notesCollection;
   fs.readFile(file, "utf8", (err, data) => {
     notesCollection = JSON.parse(data);
@@ -44,4 +46,4 @@ const updateNotes = (id, file) => {
   });
 };
 
-module.exports = { readFromFile, writeToFile, readAndAppend, updateNotes };
+module.exports = { readFromFile, writeToFile, readAndAppend, deleteNote };

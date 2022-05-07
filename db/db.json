@@ -1,22 +1,7 @@
 [
     {
-        "title": "note number four",
-        "text": "four four four\nfour four four\nfour four four\nfour four fourfour four fourfour four four\nfour four four\nfour four fourfour four four",
-        "id": "e05d5d81-a0a5-4471-97be-454da5fd5903"
-    },
-    {
-        "title": "Adding another note today",
-        "text": "node note note note note note node note note note note note node note note note note note node note note note note note node note note note note note node note note note note note\n",
-        "id": "e61c8821-7279-40b6-b703-648f91e3977e"
-    },
-    {
-        "title": "hellooooo",
-        "text": "this is me",
-        "id": "80ad88b5-1a6b-4164-a87b-158fae553612"
-    },
-    {
-        "title": "hello number two",
-        "text": "this is number two",
-        "id": "d9e061da-ba22-4722-8363-d10353f55a76"
+        "title": "note needs to have text",
+        "text": "to get the save",
+        "id": "0f26fdc5-6149-4011-b03f-b59c4d012e00"
     }
 ]

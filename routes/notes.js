@@ -1,14 +1,18 @@
-const notes = require('express').Router();
-const { readFromFile, readAndAppend, updateNotes } = require('../helpers/fsUtils');
-const { v4: uuidv4 } = require('uuid');
+const notes = require("express").Router();
+const {
+  readFromFile,
+  readAndAppend,
+  deleteNote,
+} = require("../helpers/fsUtils");
+const { v4: uuidv4 } = require("uuid");
 
 // GET Route for retrieving all the notes
-notes.get('/', (req, res) => {
-  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+notes.get("/", (req, res) => {
+  readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route for a new note
-notes.post('/', (req, res) => {
+notes.post("/", (req, res) => {
   console.log(req.body);
 
   const { title, text } = req.body;
@@ -20,16 +24,21 @@ notes.post('/', (req, res) => {
       id: uuidv4(),
     };
 
-    readAndAppend(newNote, './db/db.json');
+    readAndAppend(newNote, "./db/db.json");
     res.json(`Note added successfully 🚀`);
   } else {
-    res.error('Error in adding note');
+    res.status(400).json({
+      err: "No body in note",
+    });
   }
 });
 
-notes.delete('/:id', (req, res) => {
-  updateNotes(req.params.id, './db/db.json');
-  res.redirect('/');
-})
+// DELETE note route
+notes.delete("/:id", (req, res) => {
+  deleteNote(req.params.id, "./db/db.json");
+  res.status(200).json({
+    data: "Note deleted",
+  });
+});
 
 module.exports = notes;
