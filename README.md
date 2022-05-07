@@ -15,7 +15,11 @@
   - [Screenshots](#screenshots)
 
 ## Project Description 
-Note Taker that can be used to write and save notes. This application will uses an Express.js back end and saves and retrieves notes from a JSON file. The Note Taker is an ideal tool for busy small business owners that need to balance full work and non-work lives. A small busines owner can use the Note Taker to organise their thoughts and keep track of tasks to complete. A simple clean interface enables the small business owner to focus on their tasks and notes without the distraction of superfluous, unnecessary functionality. Go to [GitHub](https://github.com/grace-anderson/note-taker) for the Note Take code.
+The Note Taker app can be used to write and save notes. This application uses an Express.js back end and saves and retrieves notes from a JSON file.
+
+The Note Taker is an ideal tool for busy small business owners who need to balance full work and non-work lives. A small busines owner can use the Note Taker to organise their thoughts and keep track of tasks to complete. When a task is done, and no longer needed, simply clicking the delete icon deletes the note. A simple clean interface helps the small business owner  focus on their tasks and notes without the distraction of superfluous functionality. 
+
+Go to [GitHub](https://github.com/grace-anderson/note-taker) for the Note Taker app's code. See the deployed app on [Heroku](https://fierce-caverns-83469.herokuapp.com/).
 
 ## Technologies
 * JavaScript
@@ -29,8 +33,8 @@ Note Taker that can be used to write and save notes. This application will uses 
 * [Heroku](https://www.heroku.com/) 
 
 ## Usage
-* Access the Note Taker app via Heroku at LINK TO DO
-* See [gifs](#screenshots) below visually depicting the Note Taker app's functionality
+* Access the deployed Note Taker app via [Heroku](https://fierce-caverns-83469.herokuapp.com/)
+* See [screenshot and gifs](#screenshots) below that visually depict the Note Taker app's functionality
 * You may contribute to the [Note Taker project](https://github.com/grace-anderson/note-taker) following the Contribution Guidelines below.
 
 ## License
@@ -49,7 +53,7 @@ License covering this application: [MIT](https://opensource.org/licenses/MIT)
 * Also see the [GitHub Community Guidelines](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines)
 
 ## Test Instructions
-Test using the following User Story and Acceptance Criteria to validate the features of the Team Profile Generator app.
+Test using the following User Story and Acceptance Criteria to validate the features of the Note Taker app.
 
 #### User Story
 AS A small business owner
@@ -80,14 +84,12 @@ See more of Helen Anderson's work on [GitHub](https://github.com/grace-anderson)
 
 ## Screenshots
 
-TODO
+### Note Taker homepage 
+![Note Taker homepage](/img/note-taker-home-page.png)
 
-### Gif showing how clicking the email link opens the email app, and populates the 'To:' field with clicked email address 
-![Clicking email link open email app and puts email in To field](/img/email-opens-email-app.gif)
+### Gif showing opening the notes page and adding notes
+![Open notes page, from Note Taker home page, to add notes](/img/enter-notes.gif)
 
-### Gif showing how clicking engineers' gitHub links opens a gitHub profile
-![Clicking gitHub link opens gitHub profile](/img/gitHub-link-opens-github-profile.gif)
+### Gif demonstrating viewing, adding, deleting notes using Note Taker app
+![View, add, or delete notes in Note Taker](/img/view-add-delete-notes.gif) 
 
-### Videos demonstrating Team Profile Generator app
-* Instructions to run unit tests and generate the team roster webpage: [video](https://drive.google.com/file/d/1sZfav2MEzx4o1VpuHwFeVEkxEFWzGHkk/view?usp=sharing) 
-* Full instructions, including explanation of the unit tests, and a demonstration of the application's functionality [video](https://drive.google.com/file/d/1E4A8J9sGbh03yh-SlnRoJ1F83QLEUQNg/view?usp=sharing) 
