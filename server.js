@@ -1,7 +1,7 @@
-const express = require('express');
-const path = require('path');
-const { clog } = require('./middleware/clog');
-const api = require('./routes/index.js');
+const express = require("express");
+const path = require("path");
+const { clog } = require("./middleware/clog");
+const api = require("./routes/index.js");
 
 const PORT = process.env.PORT || 3001;
 
@@ -14,26 +14,25 @@ app.use(clog);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
-//middleware 
-app.use('/api', api);
+app.use(express.static("public"));
+//middleware
+app.use("/api", api);
 
 // GET Route for homepage
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/index.html"))
 );
 
 // GET Route for notes page
-app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
+app.get("/notes", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
 //if it doesn't match anything above, get the index file
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-})
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
- 
